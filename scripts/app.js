@@ -16,13 +16,13 @@ function getTranslatedURL(value) {
 function errorHandler(error) {
     console.log("error occured: ", error);
     alert("Something wrong with the server, try again later.");
+    outputData.innerText ="No details found!";
 }
 
 //Processing - what happens when the button is clicked
 function buttonClicked() {
     var textValue = textData.value;
-    outputData.setAttribute("style","border: 1px solid  var(--grey);")
-    outputData.innerText = "Translation in progress..."
+    outputData.innerText = "Translation in progress...";
     fetch(getTranslatedURL(textValue))
         .then(response => response.json())
         .then(json => {
@@ -30,6 +30,7 @@ function buttonClicked() {
                 alert("Invalid IFSC code. Please check the data and try again.");
                 outputData.innerText = "Retry with correct input..."
             } else {
+                outputData.setAttribute("style","border: 1px solid  var(--grey);");
                 outputData.innerHTML = '<p><strong>IFSC</strong>: ' + json.IFSC + ' \
                     <br><strong>BANK</strong>: ' + json.BANK + '\
                     <br><strong>BRANCH</strong>: ' + json.BRANCH + '\
