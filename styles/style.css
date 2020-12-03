@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+    --primary-color:#004C8F;
+    --text-color: white;
+    --grey: #666;
+}
+
+body {
+    font-family: 'Lora', serif;
+    margin: auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1000px;
+}
+
+p{
+    font-style: italic;
+    padding: 0rem 1rem;
+    line-height: 1.5;
+}
+
+/** Navigation **/
+.navigation {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.navigation .nav-brand {
+    font-weight: bold;
+    text-align: center;
+}
+
+/** Section container **/
+.container {
+    padding: 0rem 1rem;
+    margin: auto;
+}
+
+/** flex box div **/
+.display-flex{
+    display: flex;
+    padding: 2em;
+}
+.flex-items{
+   justify-content: center;
+   flex-flow: row wrap;
+}
+
+/** image **/
+.img {
+    max-width: 500px;
+    max-height: 300px;
+    min-width: 100px;
+    min-height: 50px;
+    display: block;
+    margin: auto;
+    padding: 1rem;
+}
+
+/** text boxes **/
+#txt-input{
+    display: block;
+    border: 1px solid  var(--grey);
+    font-family: inherit;
+    padding: 1rem;
+    font-size: large;
+    margin-left: 0.6rem; 
+    resize: none;   
+}
+
+#txt-output{
+    display: block;
+    border: 1px solid  var(--grey);
+    font-family: inherit;
+    font-size: large;
+    resize: none;  
+    margin: auto; 
+    padding: 1rem;
+}
+
+/** Button **/
+#btn-translate{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 1em;
+    font-size: larger;
+    outline:none;
+}
+
+#btn-translate:hover{
+    border-radius: 1.5em;
+}
+
+#btn-translate:active {
+    box-shadow: 0 5px var(--grey);
+    transform: translateY(4px);
+  }
+
+/** footers **/
+
+.footer {
+    background-color: var(--primary-color);
+    padding:1rem;
+    text-align: center;
+    color: var(--text-color);
+    border-top-right-radius: 1rem;
+}
+
+.footer .footer-header {
+    font-weight: bold;
+    font-size: large;
+}
+
+@media only screen and (max-width: 960px){
+    #btn-translate{
+        font-size: large;
+    }
+    #txt-input{
+        max-width: 80%;  
+    }
+}
+@media only screen and (max-width: 600px){
+
+    .display-flex{
+        flex-flow: column nowrap;
+    }
+    .flex-items{
+        margin: auto;
+    }
+    .img {
+        max-width: 100%;
+    }
+    #txt-input{
+        font-size: small;
+        margin-left: 0.4rem;
+    }
+    #txt-output{  
+        font-size: small; 
+    }
+    
+    #btn-translate{
+        font-size: small;
+    }   
+}
+

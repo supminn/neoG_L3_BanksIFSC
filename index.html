@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+    <link href="styles/style.css" rel="stylesheet" />
+    <title>Find your Bank</title>
+</head>
+
+<body>
+    <nav class="navigation">
+        <h1 class="nav-brand">Find the Bank details</h1>
+    </nav>
+    <section class="container">
+        <img class="img" src="images/ifsc-code.jpg" alt="Sample Cheque" />
+        <div class="display-flex">
+            <div class="flex-items">
+        <input id="txt-input" placeholder="Enter an IFSC" type="text" maxlength=11 required>
+        <button id="btn-translate">Show Bank Details 🏦</button>
+    </div>
+        <div id="txt-output" class="flex-items">Output is shown here</div>
+    </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-header">About IFSC</div>
+        <p>IFSC is short for Indian Financial System Code and represents the 11 digit character that you can usually see
+            on your bank’s cheque leaves, or other bank sponsored material. This 11 character code helps identify the
+            individual bank branches that participate in the various online money transfer options like NEFT and RTGS.
+        </p>
+        <small>Copyright © 2020 SupTECH</small>
+    </footer>
+    <script src="scripts/app.js" type="text/javascript"></script>
+</body>
+
+</html>
