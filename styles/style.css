@@ -73,7 +73,7 @@ p{
 
 #txt-output{
     display: block;
-    border: 1px solid  var(--grey);
+
     font-family: inherit;
     font-size: large;
     resize: none;  

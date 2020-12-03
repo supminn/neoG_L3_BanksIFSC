@@ -21,6 +21,7 @@ function errorHandler(error) {
 //Processing - what happens when the button is clicked
 function buttonClicked() {
     var textValue = textData.value;
+    outputData.setAttribute("style","border: 1px solid  var(--grey);")
     outputData.innerText = "Translation in progress..."
     fetch(getTranslatedURL(textValue))
         .then(response => response.json())
